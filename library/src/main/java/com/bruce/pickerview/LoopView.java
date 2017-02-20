@@ -255,6 +255,9 @@ public class LoopView extends View {
                 if (templateItem > mDataList.size() - 1) {
                     templateItem = templateItem - mDataList.size();
                 }
+                if (templateItem < 0) {
+					continue;
+				}
                 itemCount[count] = (String) mDataList.get(templateItem);
             } else if (templateItem < 0) {
                 itemCount[count] = "";
